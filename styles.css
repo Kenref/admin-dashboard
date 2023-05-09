@@ -1,0 +1,183 @@
+:root {
+    --dash-colour: #1992D4;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content";
+}
+
+.header, .sidebar, .main-content {
+    padding: 20px;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "search profile"
+    "greeting actions";
+}
+
+.actions li {
+    background-color: var(--dash-colour);
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+
+.menu-items li {
+    display: flex;
+}
+
+img {
+    margin-right: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#search-bar {
+    grid-area: search;
+    height: 2rem;
+    border-radius: 20px;
+    width: 500px;
+    background-color: rgb(231, 226, 226);
+}
+
+.profile {
+    grid-area: profile;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profile-image {
+    height: 45px;
+    width: 45px;
+}
+
+
+.greeting {
+    grid-area: greeting;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* #hi {
+    grid-area: hi;
+}
+
+#name {
+    grid-area: name;
+} */
+
+.actions {
+    grid-area: actions;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.greeting-picture {
+    height: 60px;
+    width: 60px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--dash-colour);
+    display: grid;
+    grid-template-rows: 100px auto auto;
+
+    
+}
+
+.dashboard {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#main-logo {
+    flex-grow: 1;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.menu-items {
+    margin-top: 30px;
+}
+
+.menu-items li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+#space {
+    margin-bottom: 3rem;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 30px;
+    grid-template-areas: 
+    "your-projects . announcements"
+    "projects projects announcements"
+    "projects projects trending"
+    "projects projects trending";
+}
+
+.your-projects {
+    grid-area: your-projects;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+
+.announcements {
+    grid-area: announcements;
+    display: grid;
+}
+
+.trending {
+    grid-area: trending;
+    display: grid;
+}
+
