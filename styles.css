@@ -12,7 +12,6 @@ li {
 }
 
 .container {
-    /* text-align: center; */
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
@@ -39,7 +38,6 @@ li {
     border-radius: 20px;
 }
 
-
 .menu-items li {
     display: flex;
 }
@@ -59,7 +57,7 @@ img {
     height: 2rem;
     border-radius: 20px;
     width: 500px;
-    background-color: rgb(231, 226, 226);
+    background-color: #E2E7F0;
 }
 
 .profile {
@@ -78,26 +76,17 @@ img {
 
 .greeting {
     grid-area: greeting;
-    display: flex;
-    flex-direction: column;
-    
+    display: flex;    
 }
-
-/* #hi {
-    grid-area: hi;
-}
-
-#name {
-    grid-area: name;
-} */
 
 .actions {
     grid-area: actions;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
-
 
 .greeting-picture {
     height: 60px;
@@ -109,8 +98,6 @@ img {
     background-color: var(--dash-colour);
     display: grid;
     grid-template-rows: 100px auto auto;
-
-    
 }
 
 .dashboard {
@@ -121,7 +108,7 @@ img {
 }
 
 #main-logo {
-    flex-grow: 1;
+    flex-grow: 0.3;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
@@ -141,10 +128,10 @@ img {
 
 .main-content {
     grid-area: main-content;
-    background-color: lightgrey;
+    background-color: #E2E7F0;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    gap: 30px;
+    gap: 20px;
     grid-template-areas: 
     "your-projects . announcements"
     "projects projects announcements"
@@ -154,30 +141,86 @@ img {
 
 .your-projects {
     grid-area: your-projects;
+    font-size: 20px;
 }
 
 .projects {
     grid-area: projects;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .card {
     text-align: center;
     background-color: white;
     padding: 20px;
+    border-left: orange 5px solid;
+    border-radius: 5px;
 }
-
 
 .announcements {
     grid-area: announcements;
     display: grid;
 }
 
+.announcement-section {
+    background-color: white;
+    padding: 30px;
+}
+
+.announcement-section:nth-child(2) {
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.announcement-section:nth-child(4) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid lightgrey;
+}
+
 .trending {
     grid-area: trending;
     display: grid;
+    
 }
 
+.trending h2 {
+    margin-bottom: 10px;
+}
+
+.trending div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "picture name"
+    "picture description";
+    background-color: white;
+    padding: 20px;
+}
+
+.trending img {
+    grid-area: picture;
+    width: 50px;
+}
+
+.trending .name {
+    grid-area: name;
+}
+
+.trending .description {
+    grid-area: description;
+}
+
+.top {
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+}
+
+.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
